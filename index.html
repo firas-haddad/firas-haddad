@@ -1,0 +1,100 @@
+<!DOCTYPE html> <html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<title>فراس حداد</title>
+</head> 
+
+ <link rel="stylesheet" href="style.css">  
+<header>  
+  <div class="logo">فراس حداد</div>    <!-- زر تغيير اللغة -->  <button id="langBtn" class="lang-btn">EN</button>
+
+  <section class="hero">  
+    <div class="hero-text">  
+      <h1 data-ar="فراس حداد" data-en="Firas Haddad">فراس حداد</h1>  <p data-ar="أعمال حدادة احترافية بجودة عالية"  
+     data-en="Professional Blacksmith Works with High Quality">  
+     أعمال حدادة احترافية بجودة عالية  
+  </p>  
+
+  <div class="buttons">  
+    <a <a href="works.html" class="btn"
+
+data-ar="شاهد أعمالنا"
+data-en="View Our Works">
+شاهد أعمالنا
+</a><section id="contact" class="contact">
+<a href="https://wa.me/9647509332387" target="_blank" class="whatsapp-btn">
+<i class="fab fa-whatsapp"></i  
+>تواصل معنا  </a>
+
+<div class="contact-buttons">
+
+<a href="https://maps.app.goo.gl/zhcFzXvd3ky4iAwk8"  
+target="_blank"  
+class="btn location">
+<i class="fas fa-map-marker-alt"></i>
+الموقع
+
+  </a>  
+</div>  </section>  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">>  
+</header>  <section class="features">  
+  <div class="feature">  
+    <h3 data-ar="دقة في العمل" data-en="Precision Work">دقة في العمل</h3>  
+  </div>  
+  <div class="feature">  
+    <h3 data-ar="خبرة ومهارة" data-en="Experience & Skill">خبرة ومهارة</h3>  
+  </div>  
+  <div class="feature">  
+    <h3 data-ar="التزام بالمواعيد" data-en="On-Time Delivery">التزام بالمواعيد</h3>  
+  </div>  
+</section>  <script>  
+const fsImages = document.querySelectorAll(".fs-grid img");  
+const fsLightbox = document.getElementById("fsLightbox");  
+const fsLightboxImg = document.getElementById("fsLightboxImg");  
+const fsClose = document.querySelector(".fs-close");  
+  
+fsImages.forEach(img => {  
+  img.onclick = () => {  
+    fsLightbox.style.display = "flex";  
+    fsLightboxImg.src = img.src;  
+    document.body.style.overflow = "hidden";  
+  };  
+});  
+  
+fsClose.onclick = () => {  
+  fsLightbox.style.display = "none";  
+  document.body.style.overflow = "auto";  
+};  
+  
+fsLightbox.onclick = (e) => {  
+  if (e.target === fsLightbox) {  
+    fsLightbox.style.display = "none";  
+    document.body.style.overflow = "auto";  
+  }  
+};  
+</script>  <script>  
+let currentLang = "ar";  
+  
+function setLanguage(lang) {  
+  const elements = document.querySelectorAll("[data-ar]");  
+  elements.forEach(el => {  
+    el.textContent = el.getAttribute(`data-${lang}`);  
+  });  
+  
+  document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";  
+  document.documentElement.lang = lang;  
+  
+  document.getElementById("langBtn").textContent =  
+    lang === "ar" ? "EN" : "AR";  
+  
+  currentLang = lang;  
+}  
+  
+document.getElementById("langBtn").onclick = () => {  
+  setLanguage(currentLang === "ar" ? "en" : "ar");  
+};  
+  
+setLanguage("ar");  
+</script>  <body/>  
+</html>

@@ -1,0 +1,484 @@
+
+body {
+background: #0f0f0f;
+color: #fff;
+animation: fade 1s ease-in;
+}
+
+/* ===== Header ===== */
+header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 15px 40px;
+background: #111;
+position: sticky;
+top: 0;
+z-index: 100;
+}
+
+.logo {
+font-size: 24px;
+color: #ff7b00;
+font-weight: bold;
+}
+
+#langBtn {
+background: #ff7a00;
+border: none;
+padding: 8px 15px;
+cursor: pointer;
+color: #000;
+font-weight: bold;
+}
+
+/* ===== Hero ===== */
+.hero {
+height: 90vh;
+display: flex;
+align-items: center;
+padding: 40px;
+background: linear-gradient(to bottom, #000, #1a1a1a);
+}
+
+.hero-text h1 {
+font-size: 60px;
+margin-bottom: 15px;
+}
+
+.hero-text p {
+font-size: 20px;
+color: #ccc;
+}
+
+.buttons {
+margin-top: 25px;
+}
+
+.btn {
+padding: 12px 25px;
+background: #ff7a00;
+color: #000;
+text-decoration: none;
+margin-left: 10px;
+display: inline-block;
+}
+
+.btn.outline {
+background: transparent;
+border: 2px solid #ff7a00;
+color: #ff7a00;
+}
+
+/* ===== Features ===== */
+.features {
+display: flex;
+justify-content: space-around;
+padding: 60px 20px;
+background: #111;
+}
+
+.feature {
+background: #1b1b1b;
+padding: 30px;
+width: 30%;
+text-align: center;
+border-top: 4px solid #ff7a00;
+}
+
+/* ===== Animations ===== */
+@keyframes fade {
+from { opacity: 0; }
+to { opacity: 1; }
+}
+
+@keyframes fadeUp {
+from {
+opacity: 0;
+transform: translateY(40px);
+}
+to {
+opacity: 1;
+transform: translateY(0);
+}
+}
+
+header,
+section {
+animation: fadeUp 1s ease forwards;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+.hero-text h1 {
+font-size: 40px;
+}
+
+.features {
+flex-direction: column;
+gap: 20px;
+}
+
+.feature {
+width: 100%;
+}
+}/* ===== Header احترافي ===== */
+.main-header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 20px 40px;
+background: #0b0b0b;
+border-bottom: 2px solid #ff6600;
+}
+
+.logo {
+font-size: 28px;
+font-weight: bold;
+color: #ff6600;
+}
+
+nav a {
+color: #fff;
+margin-right: 20px;
+text-decoration: none;
+font-size: 18px;
+position: relative;
+}
+
+nav a::after {
+content: "";
+position: absolute;
+bottom: -5px;
+right: 0;
+width: 0;
+height: 2px;
+background: #ff6600;
+transition: 0.3s;
+}
+
+nav a:hover::after {
+width: 100%;
+}/* ===== Hero Section ===== */
+.hero {
+height: 80vh;
+background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+url("images/work1.jpg") center/cover;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+text-align: center;
+padding: 20px;
+}
+
+.hero h1 {
+font-size: 42px;
+margin-bottom: 15px;
+}
+
+.hero p {
+font-size: 20px;
+margin-bottom: 25px;
+color: #ddd;
+}
+
+.btn {
+background: #ff6600;
+color: #fff;
+padding: 12px 30px;
+text-decoration: none;
+border-radius: 30px;
+font-size: 18px;
+transition: 0.3s;
+}
+
+.btn:hover {
+background: #ff3300;
+}.pro-video-section {
+padding: 80px 20px;
+background: linear-gradient(180deg, #0f0f0f, #1a1a1a);
+text-align: center;
+}
+
+.pro-video-section h2 {
+color: #ff6a00;
+font-size: 32px;
+margin-bottom: 40px;
+letter-spacing: 1px;
+}
+
+.video-box {
+max-width: 900px;
+margin: auto;
+border-radius: 18px;
+padding: 6px;
+background: linear-gradient(45deg, #ff6a00, #ffae00);
+box-shadow: 0 0 40px rgba(255, 106, 0, 0.4);
+}
+
+.video-box video {
+width: 100%;
+height: auto;
+border-radius: 14px;
+display: block;
+background: #000;
+}.vertical-video {
+width: 320px;          /* عرض ثابت /
+height: 568px;         / طول ثابت (شكل موبايل) /
+display: block;
+margin: 40px auto;
+border-radius: 20px;
+border: 3px solid #ff6600;
+background: #000;
+box-shadow: 0 0 25px #ff6600;
+object-fit: cover;     / يملأ الإطار بدون تشويه */
+animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+from {
+box-shadow: 0 0 12px #ff6600;
+}
+to {
+box-shadow: 0 0 30px #ff9900;
+}
+}/* ===== WORK PAGE FIX ===== */
+.work-section,
+.video-section {
+padding: 70px 20px;
+text-align: center;
+}
+
+.work-section h2,
+.video-section h2 {
+color: #ff7a00;
+margin-bottom: 30px;
+}
+
+.grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+gap: 20px;
+}
+
+.grid img {
+width: 100%;
+border-radius: 14px;
+transition: 0.4s;
+}
+
+.grid img:hover {
+transform: scale(1.05);
+box-shadow: 0 0 20px #ff7a00;
+}
+
+.video-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+gap: 25px;
+}
+
+.video-grid video {
+width: 100%;
+border-radius: 15px;
+border: 3px solid #ff7a00;
+}.whatsapp-btn {
+display: inline-flex;
+align-items: center;
+gap: 6px;
+padding: 8px 12px;      /* ⬅️ زِدنا الارتفاع فقط /
+background: #25D366;
+color: #fff;
+font-size: 13px;
+font-weight: 500;
+border-radius: 24px;    / ⬅️ تناسب الارتفاع */
+text-decoration: none;
+box-shadow: 0 0 6px rgba(37, 211, 102, 0.5);
+transition: 0.25s ease;
+}
+
+.whatsapp-btn i {
+font-size: 14px;
+}
+
+.whatsapp-btn:hover {
+background: #1ebe5d;
+box-shadow: 0 0 12px rgba(37, 211, 102, 0.8);
+transform: scale(1.02);
+}.whatsapp-btn {
+display: inline-flex;
+align-items: center;
+gap: 6px;
+padding: 8px 12px;
+background: #25D366;
+color: #fff;
+font-size: 13px;
+font-weight: 500;
+border-radius: 24px;
+text-decoration: none;
+box-shadow: 0 0 6px rgba(37, 211, 102, 0.5);
+transition: 0.25s ease;
+}
+
+.whatsapp-btn i {
+font-size: 14px;
+}
+
+.whatsapp-btn:hover {
+background: #1ebe5d;
+box-shadow: 0 0 12px rgba(37, 211, 102, 0.8);
+transform: scale(1.02);
+}.location-btn.small {
+padding: 8px 16px;
+font-size: 14px;
+border-radius: 25px;
+gap: 6px;
+background: linear-gradient(135deg, #ff9800, #ff5722);
+box-shadow: 0 0 8px rgba(255, 152, 0, 0.5);
+}
+
+.location-btn.small i {
+font-size: 16px;
+}
+
+.location-btn.small:hover {
+transform: scale(1.05);
+box-shadow: 0 0 14px rgba(255, 87, 34, 0.8);
+}.location-btn.small {
+padding: 8px 16px;
+font-size: 14px;
+border-radius: 25px;
+gap: 6px;
+background: linear-gradient(135deg, #ff9800, #ff5722);
+box-shadow: 0 0 8px rgba(255, 152, 0, 0.5);
+}
+
+.location-btn.small i {
+font-size: 16px;
+}
+
+.location-btn.small:hover {
+transform: scale(1.05);
+box-shadow: 0 0 14px rgba(255, 87, 34, 0.8);
+}.contact-buttons {
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 12px;
+flex-wrap: wrap;
+margin-top: 20px;
+}
+
+.btn {
+display: flex;
+align-items: center;
+justify-content: center;
+min-width: 110px;
+height: 42px;
+padding: 0 16px;
+border-radius: 30px;
+font-size: 14px;
+font-weight: 600;
+text-decoration: none;
+color: #fff;
+transition: 0.3s ease;
+}
+
+.btn i {
+margin-left: 6px; /* RTL */
+font-size: 15px;
+}
+
+/* زر الموقع */
+.btn.location {
+background: linear-gradient(135deg, #ff9800, #ff5722);
+box-shadow: 0 0 10px rgba(255, 152, 0, 0.45);
+}
+
+.btn.location:hover {
+transform: translateY(-2px);
+box-shadow: 0 0 16px rgba(255, 87, 34, 0.75);
+}/* ===== شريط الأقسام العلوي ===== */
+.works-menu {
+position: sticky;
+top: 70px;
+z-index: 999;
+background: #0f0f0f;
+padding: 14px 12px;
+border-bottom: 1px solid rgba(255, 122, 0, 0.25);
+}
+
+/* العنوان */
+.menu-title {
+color: #ff7a00;
+font-size: 16px;
+font-weight: 700;
+margin-bottom: 10px;
+}
+
+/* القائمة */
+.menu-list {
+display: flex;
+gap: 12px;
+overflow-x: auto;
+padding-bottom: 6px;
+list-style: none;
+margin: 0;
+padding-left: 0;
+scrollbar-width: none;
+}
+
+.menu-list::-webkit-scrollbar {
+display: none;
+}
+
+/* ===== زر القسم ===== */
+.work-btn {
+display: flex;
+align-items: center;
+gap: 8px;
+
+padding: 10px 18px;
+border-radius: 30px;
+
+background: #151515;
+border: 1px solid rgba(255, 122, 0, 0.3);
+
+color: #fff;
+font-size: 14px;
+font-weight: 500;
+
+cursor: pointer;
+white-space: nowrap;
+
+transition: all 0.25s ease;
+}
+
+/* الأيقونة */
+.work-btn span:first-child {
+font-size: 16px;
+}
+
+/* Hover */
+.work-btn:hover {
+background: rgba(255, 122, 0, 0.15);
+transform: translateY(-2px);
+box-shadow: 0 6px 18px rgba(255, 122, 0, 0.35);
+}
+
+/* الزر النشط */
+.work-btn.active {
+background: linear-gradient(135deg, #ff7a00, #ff9a3c);
+color: #000;
+border-color: transparent;
+box-shadow: 0 8px 24px rgba(255, 122, 0, 0.6);
+}
+
+/* موبايل */
+@media (max-width: 600px) {
+.work-btn {
+padding: 9px 14px;
+font-size: 13px;
+}
+}
