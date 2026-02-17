@@ -1,100 +1,148 @@
-<!DOCTYPE html> <html>
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="style.css">
-<title>فراس حداد</title>
-</head> 
+<!DOCTYPE html>  <html lang="ar" dir="rtl">  
+<head>  
+  <meta charset="UTF-8">  
+  <title>فراس حداد | FIRAS WELDER</title>  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+  <link rel="stylesheet" href="style.css">  
+</head>  <body>  <header class="main-header">  
+  <div class="logo-box">  
+    <img src="img/logo.png" alt="Firas Welder Logo">  
+    <div class="logo-text">  
+      <h1>FIRAS</h1>  
+      <span>WELDER</span>  
+    </div>  <!-- زر تغيير اللغة -->  
+<button id="langBtn" class="lang-btn">  
+  <span>EN</span>  
+</button>
 
- <link rel="stylesheet" href="style.css">  
-<header>  
-  <div class="logo">فراس حداد</div>    <!-- زر تغيير اللغة -->  <button id="langBtn" class="lang-btn">EN</button>
+  </div>    <nav class="nav">  
+    <a href="index.html" data-ar="الرئيسية" data-en="Home">الرئيسية</a>  
+    <a href="works.html" data-ar="أعمالنا" data-en="Our Works">أعمالنا</a>  
+    <a href="#about" data-ar="من نحن" data-en="About Us">من نحن</a>  
+    <a href="https://wa.me/9647509332387" target="_blank">تواصل</a>
+  </nav>  
+</header>  <main class="home">    <section class="hero">  
+    <h1 data-ar="حدادة عصرية بتصاميم فاخرة"  
+        data-en="Modern Welding with Luxury Designs">  
+        حدادة عصرية بتصاميم فاخرة  
+    </h1>  <p data-ar="أبواب حديد • درابزين • درج • تنفيذ حسب الطلب"  
+   data-en="Iron Doors • Railings • Stairs • Custom Made">  
+   أبواب حديد • درابزين • درج • تنفيذ حسب الطلب  
+</p>  
+  
+<div class="hero-buttons">  
 
-  <section class="hero">  
-    <div class="hero-text">  
-      <h1 data-ar="فراس حداد" data-en="Firas Haddad">فراس حداد</h1>  <p data-ar="أعمال حدادة احترافية بجودة عالية"  
-     data-en="Professional Blacksmith Works with High Quality">  
-     أعمال حدادة احترافية بجودة عالية  
-  </p>  
-
-  <div class="buttons">  
-    <a <a href="works.html" class="btn"
-
-data-ar="شاهد أعمالنا"
-data-en="View Our Works">
-شاهد أعمالنا
-</a><section id="contact" class="contact">
-<a href="https://wa.me/9647509332387" target="_blank" class="whatsapp-btn">
-<i class="fab fa-whatsapp"></i  
->تواصل معنا  </a>
-
-<div class="contact-buttons">
-
-<a href="https://maps.app.goo.gl/zhcFzXvd3ky4iAwk8"  
-target="_blank"  
-class="btn location">
-<i class="fas fa-map-marker-alt"></i>
-الموقع
-
+  <a href="works.html" class="btn works"  
+     data-ar="شاهد أعمالنا"  
+     data-en="View Our Works">  
+     شاهد أعمالنا  
   </a>  
-</div>  </section>  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">>  
-</header>  <section class="features">  
-  <div class="feature">  
-    <h3 data-ar="دقة في العمل" data-en="Precision Work">دقة في العمل</h3>  
-  </div>  
-  <div class="feature">  
-    <h3 data-ar="خبرة ومهارة" data-en="Experience & Skill">خبرة ومهارة</h3>  
-  </div>  
-  <div class="feature">  
-    <h3 data-ar="التزام بالمواعيد" data-en="On-Time Delivery">التزام بالمواعيد</h3>  
-  </div>  
-</section>  <script>  
-const fsImages = document.querySelectorAll(".fs-grid img");  
-const fsLightbox = document.getElementById("fsLightbox");  
-const fsLightboxImg = document.getElementById("fsLightboxImg");  
-const fsClose = document.querySelector(".fs-close");  
+
+  <a href="https://wa.me/9647509332387"   
+     class="btn whatsapp" target="_blank"  
+     data-ar="تواصل واتساب"  
+     data-en="WhatsApp Contact">  
+     تواصل واتساب  
+  </a>  
+
+  <a href="https://maps.app.goo.gl/BjnRv59xSsQE6wKm8"   
+     class="btn location" target="_blank"  
+     data-ar="📍 موقع العمل"  
+     data-en="📍 Work Location">  
+     📍 موقع العمل  
+  </a>  
+
+</div>  
+
+<div class="trust"  
+     data-ar="خبرة • جودة • التزام"  
+     data-en="Experience • Quality • Commitment">  
+     خبرة • جودة • التزام  
+</div>
+
+  </section>    <!-- ======= من نحن (الإضافة الوحيدة) ======= -->    <section class="about" id="about">  
+    <h2 data-ar="من نحن" data-en="About Us">من نحن</h2>  <p data-ar="فراس حداد متخصص في أعمال الحدادة الحديثة، نقدم حلولًا احترافية في تصنيع وتركيب الأبواب الحديدية، الدرج المعدني، الدرابزين، والأسقف المعدنية، مع تنفيذ الأعمال حسب الطلب وبجودة عالية."  
+   data-en="Firas Welder specializes in modern metal works, offering professional solutions for iron doors, metal stairs, railings, and metal roofs with high quality and custom execution.">  
+   فراس حداد متخصص في أعمال الحدادة الحديثة، نقدم حلولًا احترافية في تصنيع وتركيب الأبواب الحديدية، الدرج المعدني، الدرابزين، والأسقف المعدنية، مع تنفيذ الأعمال حسب الطلب وبجودة عالية.  
+</p>
+<div class="about-icons">
+  <div class="icon-item">
+    <span>🛠️</span>
+    <span>خبرة</span>
+  </div>
   
-fsImages.forEach(img => {  
-  img.onclick = () => {  
-    fsLightbox.style.display = "flex";  
-    fsLightboxImg.src = img.src;  
-    document.body.style.overflow = "hidden";  
-  };  
-});  
+  <div class="icon-item">
+    <span>✔️</span>
+    <span>جودة</span>
+  </div>
   
-fsClose.onclick = () => {  
-  fsLightbox.style.display = "none";  
-  document.body.style.overflow = "auto";  
-};  
+  <div class="icon-item">
+    <span>🤝</span>
+    <span>التزام</span>
+  </div>
+</div>
+  </section>  </main>  <!-- سكربت تغيير اللغة -->  <script>  
+  let currentLang = "ar";  
   
-fsLightbox.onclick = (e) => {  
-  if (e.target === fsLightbox) {  
-    fsLightbox.style.display = "none";  
-    document.body.style.overflow = "auto";  
-  }  
-};  
-</script>  <script>  
-let currentLang = "ar";  
-  
-function setLanguage(lang) {  
+  const langBtn = document.getElementById("langBtn");  
   const elements = document.querySelectorAll("[data-ar]");  
-  elements.forEach(el => {  
-    el.textContent = el.getAttribute(`data-${lang}`);  
-  });  
   
-  document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";  
-  document.documentElement.lang = lang;  
+  langBtn.onclick = () => {  
+    if (currentLang === "ar") {  
+      elements.forEach(el => el.textContent = el.dataset.en);  
+      document.documentElement.lang = "en";  
+      document.documentElement.dir = "ltr";  
+      langBtn.textContent = "AR";  
+      currentLang = "en";  
+    } else {  
+      elements.forEach(el => el.textContent = el.dataset.ar);  
+      document.documentElement.lang = "ar";  
+      document.documentElement.dir = "rtl";  
+      langBtn.textContent = "EN";  
+      currentLang = "ar";  
+    }  
+  };  
+</script>  <script>  
+document.addEventListener('contextmenu', e => e.preventDefault());  
+document.addEventListener('copy', e => e.preventDefault());  
+</script>  <script>  
+document.querySelectorAll("img").forEach(img => {  
   
-  document.getElementById("langBtn").textContent =  
-    lang === "ar" ? "EN" : "AR";  
+  // تجاهل اللوجو نفسه حتى لا يكرر فوق نفسه  
+  if (img.src.includes("logo.png")) return;  
   
-  currentLang = lang;  
-}  
+  const wrapper = document.createElement("div");  
+  wrapper.style.position = "relative";  
+  wrapper.style.display = "inline-block";  
+  wrapper.style.width = img.offsetWidth + "px";  
+  wrapper.style.maxWidth = "100%";  
   
-document.getElementById("langBtn").onclick = () => {  
-  setLanguage(currentLang === "ar" ? "en" : "ar");  
-};  
+  img.parentNode.insertBefore(wrapper, img);  
+  wrapper.appendChild(img);  
   
-setLanguage("ar");  
-</script>  <body/>  
+  const watermark = document.createElement("img");  
+  watermark.src = "img/logo.png";  
+  watermark.style.position = "absolute";  
+  watermark.style.bottom = "10px";  
+  watermark.style.right = "10px";  
+  watermark.style.width = "60px";  
+  watermark.style.opacity = "0.35";  
+  watermark.style.pointerEvents = "none";  
+  watermark.style.userSelect = "none";  
+  watermark.style.filter = "grayscale(100%)";  
+  
+  wrapper.appendChild(watermark);  
+});  
+</script>  
+<footer class="site-footer">
+  <p>
+    © <span id="year"></span>
+    <span class="copy-text"
+          data-ar="جميع الحقوق محفوظة — فراس حداد"
+          data-en="All Rights Reserved — Firas Welder">
+      جميع الحقوق محفوظة — فراس حداد
+    </span>
+  </p>
+</footer>
+</body>  
 </html>
