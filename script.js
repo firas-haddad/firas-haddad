@@ -122,4 +122,7 @@ function getDistance(t1, t2) {
 function applyTransform() {
   lightImg.style.transform =
     `translate(${posX}px, ${posY}px) scale(${scale})`;
+}function openWhatsApp(event) {
+  event.stopPropagation(); // يمنع فتح القسم
+  window.open("https://wa.me/9647509332387", "_blank");
 }
