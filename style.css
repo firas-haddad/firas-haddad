@@ -261,4 +261,38 @@ main {
   gap: 8px;
   font-size: 18px;
   font-weight: 500;
+}.zoom-btn {
+  position: absolute;
+  top: 20px;
+  width: 48px;
+  height: 48px;
+  font-size: 34px;
+  font-weight: bold;
+  border: none;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #d4af37, #ffd700);
+  color: #000;
+  cursor: pointer;
+  z-index: 10000;
+  
+  /* تحسين التفاعل */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+/* عند اللمس أو الضغط */
+.zoom-btn:active {
+  transform: scale(1.15);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.6);
+}
+
+.zoom-btn.plus {
+  right: 80px;
+}
+
+.zoom-btn.minus {
+  right: 20px;
 }
