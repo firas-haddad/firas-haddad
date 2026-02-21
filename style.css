@@ -295,4 +295,52 @@ main {
 
 .zoom-btn.minus {
   right: 20px;
+}.whatsapp-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 6px 12px;      /* 👈 تصغير المساحة الداخلية */
+  font-size: 13px;        /* 👈 تصغير الخط */
+  border-radius: 20px;    /* شكل أنيق */
+  background: #25D366;    /* لون واتساب */
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s;
+}.work-card {
+  position: relative;
+  background: #0d0d0d;
+  border: 1px solid rgba(255, 215, 0, 0.3);
+  border-radius: 20px;
+  padding: 40px 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+/* تأثير عند المرور */
+.work-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 25px rgba(255, 215, 0, 0.4);
+}
+
+/* تأثير عند الضغط */
+.work-card:active {
+  transform: scale(0.97);
+}
+
+/* سهم يدل على أنه زر */
+.work-card::after {
+  content: "←";
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 22px;
+  color: #FFD700;
+  opacity: 0.7;
+  transition: 0.3s;
+}
+
+.work-card:hover::after {
+  left: 15px;
+  opacity: 1;
 }

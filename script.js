@@ -1,128 +1,73 @@
+/* ================== الأقسام ================== */
 function openSection(id) {
-  document.getElementById("sectionsCards").style.display = "none";
+  const cards = document.getElementById("sectionsCards");
+  const sections = document.querySelectorAll(".work-section");
   
-  document.querySelectorAll(".work-section").forEach(sec => {
-    sec.style.display = "none";
-  });
+  if (cards) cards.style.display = "none";
+  sections.forEach(sec => sec.style.display = "none");
   
-  document.getElementById(id).style.display = "block";
-  window.scrollTo({ top: 0, behavior: "smooth" });
+  const target = document.getElementById(id);
+  if (target) {
+    target.style.display = "block";
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    history.pushState({ section: id }, "", "#" + id);
+  }
 }
 
-/* Lightbox */
-function openLightbox(img) {
-  document.getElementById("lightbox").style.display = "flex";
-  document.getElementById("lightbox-img").src = img.src;
+/* ================== WhatsApp ================== */
+function openWhatsApp(event) {
+  event.stopPropagation();
+  window.open("https://wa.me/9647509332387", "_blank");
 }
 
-function closeLightbox() {
-  document.getElementById("lightbox").style.display = "none";
+/* ================== تغيير اللغة ================== */
+let currentLang = "ar";
+const langBtn = document.getElementById("langBtn");
+
+if (langBtn) {
+  langBtn.onclick = () => {
+    currentLang = currentLang === "ar" ? "en" : "ar";
+    
+    document.documentElement.lang = currentLang;
+    document.documentElement.dir = currentLang === "ar" ? "rtl" : "ltr";
+    langBtn.textContent = currentLang === "ar" ? "EN" : "AR";
+    
+    document.querySelectorAll("[data-ar]").forEach(el => {
+      el.textContent = el.dataset[currentLang];
+    });
+  };
 }
 
-/* لغتين */
-let lang = "ar";
-document.getElementById("langBtn").onclick = () => {
-  lang = lang === "ar" ? "en" : "ar";
-  document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
-  document.getElementById("langBtn").innerText = lang === "ar" ? "EN" : "AR";
-  
-  document.querySelectorAll("[data-ar]").forEach(el => {
-    el.innerText = el.dataset[lang];
-  });
-};function openLightbox(img) {
-  document.getElementById("lightbox").style.display = "flex";
-  document.getElementById("lightbox-img").src = img.src;
-  document.body.classList.add("lightbox-open");
-}
-
-function closeLightbox() {
-  document.getElementById("lightbox").style.display = "none";
-  document.body.classList.remove("lightbox-open");
-}// سنة تلقائية + توافق مع تغيير اللغة
+/* ================== السنة ================== */
 document.addEventListener("DOMContentLoaded", () => {
-  document.getElementById("year").textContent = new Date().getFullYear();
-});/* ================== Lightbox + Pinch Zoom + Pan ================== */
+  const year = document.getElementById("year");
+  if (year) year.textContent = new Date().getFullYear();
+});
 
-let scale = 1;
-let startDistance = 0;
-
-let posX = 0;
-let posY = 0;
-let startX = 0;
-let startY = 0;
-let isDragging = false;
-
+/* ================== Lightbox ================== */
 const lightbox = document.getElementById("lightbox");
 const lightImg = document.getElementById("lightbox-img");
 
-/* فتح الصورة */
 function openLightbox(img) {
-  scale = 1;
-  posX = 0;
-  posY = 0;
-  
   lightImg.src = img.src;
-  lightImg.style.transform = `translate(0px, 0px) scale(1)`;
   lightbox.style.display = "flex";
+  history.pushState({ lightbox: true }, "", "#img");
 }
 
-/* إغلاق */
 function closeLightbox() {
   lightbox.style.display = "none";
 }
 
-/* ===== Pinch Zoom ===== */
-lightbox.addEventListener("touchstart", function(e) {
-  if (e.touches.length === 2) {
-    startDistance = getDistance(e.touches[0], e.touches[1]);
+/* ================== زر الرجوع ================== */
+window.addEventListener("popstate", () => {
+  if (lightbox && lightbox.style.display === "flex") {
+    closeLightbox();
+    return;
   }
   
-  if (e.touches.length === 1 && scale > 1) {
-    isDragging = true;
-    startX = e.touches[0].pageX - posX;
-    startY = e.touches[0].pageY - posY;
-  }
-});
-
-lightbox.addEventListener("touchmove", function(e) {
-  if (e.touches.length === 2) {
-    e.preventDefault();
-    
-    const newDistance = getDistance(e.touches[0], e.touches[1]);
-    const diff = newDistance - startDistance;
-    
-    scale += diff * 0.002;
-    if (scale < 1) scale = 1;
-    if (scale > 4) scale = 4;
-    
-    applyTransform();
-    startDistance = newDistance;
-  }
+  const cards = document.getElementById("sectionsCards");
+  const sections = document.querySelectorAll(".work-section");
   
-  if (e.touches.length === 1 && isDragging && scale > 1) {
-    e.preventDefault();
-    posX = e.touches[0].pageX - startX;
-    posY = e.touches[0].pageY - startY;
-    applyTransform();
-  }
+  if (cards) cards.style.display = "grid";
+  sections.forEach(sec => sec.style.display = "none");
 });
-
-lightbox.addEventListener("touchend", function() {
-  isDragging = false;
-});
-
-/* حساب المسافة بين إصبعين */
-function getDistance(t1, t2) {
-  const dx = t1.pageX - t2.pageX;
-  const dy = t1.pageY - t2.pageY;
-  return Math.sqrt(dx * dx + dy * dy);
-}
-
-/* تطبيق التحويل */
-function applyTransform() {
-  lightImg.style.transform =
-    `translate(${posX}px, ${posY}px) scale(${scale})`;
-}function openWhatsApp(event) {
-  event.stopPropagation(); // يمنع فتح القسم
-  window.open("https://wa.me/9647509332387", "_blank");
-}

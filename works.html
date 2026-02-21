@@ -2,7 +2,7 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <title>أعمالنا | فراس حداد</title>
+  <title data-ar="أعمالنا | فراس حداد" data-en="Our Works | Firas Haddad">أعمالنا | فراس حداد</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -32,233 +32,152 @@
 
 <main class="works">
 
+  <!-- كروت الأقسام -->
   <div id="sectionsCards" class="works-grid">
+
     <div class="work-card" onclick="openSection('doors')">
-      <h3>أبواب حديد</h3>
-      <div class="whatsapp-btn" onclick="openWhatsApp(event)">
-  تواصل واتساب
-</div>
+      <h3 data-ar="أبواب حديد" data-en="Iron Doors">أبواب حديد</h3>
+      <div class="whatsapp-btn"
+           onclick="openWhatsApp(event)"
+           data-ar="تواصل واتساب"
+           data-en="WhatsApp Contact">
+        تواصل واتساب
+      </div>
+    </div>
 
     <div class="work-card" onclick="openSection('stairs')">
-      <h3>درج حديد</h3>
-      <div class="whatsapp-btn">تواصل واتساب</div>
+      <h3 data-ar="درج حديد" data-en="Iron Stairs">درج حديد</h3>
+      <div class="whatsapp-btn"
+           onclick="openWhatsApp(event)"
+           data-ar="تواصل واتساب"
+           data-en="WhatsApp Contact">
+        تواصل واتساب
+      </div>
     </div>
 
     <div class="work-card" onclick="openSection('rails')">
-      <h3>درابزين</h3>
-      <div class="whatsapp-btn">تواصل واتساب</div>
+      <h3 data-ar="درابزين" data-en="Railings">درابزين</h3>
+      <div class="whatsapp-btn"
+           onclick="openWhatsApp(event)"
+           data-ar="تواصل واتساب"
+           data-en="WhatsApp Contact">
+        تواصل واتساب
+      </div>
     </div>
 
     <div class="work-card" onclick="openSection('roofs')">
-      <h3>أسقف</h3>
-      <div class="whatsapp-btn">تواصل واتساب</div>
+      <h3 data-ar="أسقف" data-en="Roofs">أسقف</h3>
+      <div class="whatsapp-btn"
+           onclick="openWhatsApp(event)"
+           data-ar="تواصل واتساب"
+           data-en="WhatsApp Contact">
+        تواصل واتساب
+      </div>
     </div>
 
     <div class="work-card" onclick="openSection('sandwich')">
-      <h3>سندويش بنل</h3>
-      <div class="whatsapp-btn">تواصل واتساب</div>
+      <h3 data-ar="سندويش بنل" data-en="Sandwich Panel">سندويش بنل</h3>
+      <div class="whatsapp-btn"
+           onclick="openWhatsApp(event)"
+           data-ar="تواصل واتساب"
+           data-en="WhatsApp Contact">
+        تواصل واتساب
+      </div>
     </div>
+
   </div>
 
-  <!-- الأقسام -->
+  <!-- الأبواب -->
   <section id="doors" class="work-section">
-    <h2>أبواب حديد</h2>
+    <h2 data-ar="أبواب حديد" data-en="Iron Doors">أبواب حديد</h2>
     <div class="gallery">
-      <div class="img-box">
-        <img src="img/doors/door1.jpg" onclick="openLightbox(this)">
-      </div>
-      <div class="img-box">
-        <img src="img/doors/door2.jpg" onclick="openLightbox(this)">
-      </div>
-       <div class="img-box">
-   <img src="img/doors/door3.jpg" onclick="openLightbox(this)">
- </div>
-  <div class="img-box">
-        <img src="img/doors/door4.jpg" onclick="openLightbox(this)">
-      </div>
-       <div class="img-box">
-  <img src="img/doors/door5.jpg" onclick="openLightbox(this)">
-      </div>
-           <div class="img-box">
-       <img src="img/doors/door6.jpg" onclick="openLightbox(this)">
-     </div>
-          <div class="img-box">
-  <img src="img/doors/door7.jpg" onclick="openLightbox(this)">
-      </div>
-           <div class="img-box">
-       <img src="img/doors/door8.jpg" onclick="openLightbox(this)">
-     </div>
-          <div class="img-box">
-       <img src="img/doors/door9.jpg" onclick="openLightbox(this)">
-     </div>
-          <div class="img-box">
-       <img src="img/doors/door10.jpg" onclick="openLightbox(this)">
-     </div>
+      <div class="img-box"><img src="img/doors/door1.jpg" onclick="openLightbox(this)"></div>
+      <div class="img-box"><img src="img/doors/door2.jpg" onclick="openLightbox(this)"></div>
+      <div class="img-box"><img src="img/doors/door3.jpg" onclick="openLightbox(this)"></div>
+      <div class="img-box"><img src="img/doors/door4.jpg" onclick="openLightbox(this)"></div>
+      <div class="img-box"><img src="img/doors/door5.jpg" onclick="openLightbox(this)"></div>
+      <div class="img-box"><img src="img/doors/door6.jpg" onclick="openLightbox(this)"></div>
+      <div class="img-box"><img src="img/doors/door7.jpg" onclick="openLightbox(this)"></div>
+      <div class="img-box"><img src="img/doors/door8.jpg" onclick="openLightbox(this)"></div>
+      <div class="img-box"><img src="img/doors/door9.jpg" onclick="openLightbox(this)"></div>
+      <div class="img-box"><img src="img/doors/door10.jpg" onclick="openLightbox(this)"></div>
     </div>
-    
   </section>
 
+  <!-- الدرج -->
   <section id="stairs" class="work-section">
-    <h2>درج حديد</h2>
+    <h2 data-ar="درج حديد" data-en="Iron Stairs">درج حديد</h2>
     <div class="gallery">
-      <div class="img-box">
-  <img src="img/stairs/stairs1.jpg" onclick="openLightbox(this)">
-      </div>
-      <div class="img-box">
-        <img src="img/stairs/2.jpg" onclick="openLightbox(this)">
-      </div>
-            <div class="img-box">
-   <img src="img/stairs/stairs3.jpg" onclick="openLightbox(this)">
-      </div>
-            <div class="img-box">
-    <img src="img/stairs/stairs4.jpg" onclick="openLightbox(this)">
-      </div>
-            <div class="img-box">
-   <img src="img/stairs/stairs4.jpg" onclick="openLightbox(this)">
-      </div>
-            <div class="img-box">
-  <img src="img/stairs/stairs6.jpg" onclick="openLightbox(this)">
-      </div>
-            <div class="img-box">
-  <img src="img/stairs/stairs7.jpg" onclick="openLightbox(this)">
-      </div>
-            <div class="img-box">
-   <img src="img/stairs/stairs8.jpg" onclick="openLightbox(this)">
-      </div>
-                 <div class="img-box">
-    <img src="img/stairs/stairs9.jpg" onclick="openLightbox(this)">
-           </div>
-      <div class="img-box">
-    <img src="img/stairs/stairs10.jpg" onclick="openLightbox(this)">
-           </div>
+      <div class="img-box"><img src="img/stairs/stairs1.jpg" onclick="openLightbox(this)"></div>
+      <div class="img-box"><img src="img/stairs/2.jpg" onclick="openLightbox(this)"></div>
+      <div class="img-box"><img src="img/stairs/stairs3.jpg" onclick="openLightbox(this)"></div>
+      <div class="img-box"><img src="img/stairs/stairs4.jpg" onclick="openLightbox(this)"></div>
+      <div class="img-box"><img src="img/stairs/stairs4.jpg" onclick="openLightbox(this)"></div>
+      <div class="img-box"><img src="img/stairs/stairs6.jpg" onclick="openLightbox(this)"></div>
+      <div class="img-box"><img src="img/stairs/stairs7.jpg" onclick="openLightbox(this)"></div>
+      <div class="img-box"><img src="img/stairs/stairs8.jpg" onclick="openLightbox(this)"></div>
+      <div class="img-box"><img src="img/stairs/stairs9.jpg" onclick="openLightbox(this)"></div>
+      <div class="img-box"><img src="img/stairs/stairs10.jpg" onclick="openLightbox(this)"></div>
     </div>
   </section>
 
+  <!-- الدرابزين -->
   <section id="rails" class="work-section">
-    <h2>درابزين</h2>
+    <h2 data-ar="درابزين" data-en="Railings">درابزين</h2>
     <div class="gallery">
-      <div class="img-box">
-      <img src="img/rails/rails1.jpg" onclick="openLightbox(this)">
-      </div>
-      <div class="img-box">
-      <img src="img/rails/rails2.jpg" onclick="openLightbox(this)">
-      </div>
-      <div class="img-box">
-  <img src="img/rails/rails3.jpg" onclick="openLightbox(this)">
-</div>
-<div class="img-box">
-  <img src="img/rails/rails4.jpg" onclick="openLightbox(this)">
-</div>
-<div class="img-box">
-  <img src="img/rails/rails5.jpg" onclick="openLightbox(this)">
-</div>
-<div class="img-box">
-  <img src="img/rails/rails6.jpg" onclick="openLightbox(this)">
-</div>
-<div class="img-box">
-  <img src="img/rails/rails7.jpg" onclick="openLightbox(this)">
-</div>
-<div class="img-box">
-  <img src="img/rails/rails8.jpg" onclick="openLightbox(this)">
-</div>
-<div class="img-box">
-  <img src="img/rails/rails9.jpg" onclick="openLightbox(this)">
-</div>
-<div class="img-box">
-  <img src="img/rails/rails10.jpg" onclick="openLightbox(this)">
-</div>
+      <div class="img-box"><img src="img/rails/rails1.jpg" onclick="openLightbox(this)"></div>
+      <div class="img-box"><img src="img/rails/rails2.jpg" onclick="openLightbox(this)"></div>
+      <div class="img-box"><img src="img/rails/rails3.jpg" onclick="openLightbox(this)"></div>
+      <div class="img-box"><img src="img/rails/rails4.jpg" onclick="openLightbox(this)"></div>
+      <div class="img-box"><img src="img/rails/rails5.jpg" onclick="openLightbox(this)"></div>
+      <div class="img-box"><img src="img/rails/rails6.jpg" onclick="openLightbox(this)"></div>
+      <div class="img-box"><img src="img/rails/rails7.jpg" onclick="openLightbox(this)"></div>
+      <div class="img-box"><img src="img/rails/rails8.jpg" onclick="openLightbox(this)"></div>
+      <div class="img-box"><img src="img/rails/rails9.jpg" onclick="openLightbox(this)"></div>
+      <div class="img-box"><img src="img/rails/rails10.jpg" onclick="openLightbox(this)"></div>
     </div>
   </section>
 
+  <!-- الأسقف -->
   <section id="roofs" class="work-section">
-    <h2>أسقف</h2>
+    <h2 data-ar="أسقف" data-en="Roofs">أسقف</h2>
     <div class="gallery">
-      <div class="img-box">
-     <img src="img/roofs/roofs1.jpg" onclick="openLightbox(this)">
-      </div>
-           <div class="img-box">
-     <img src="img/roofs/roofs2.jpg" onclick="openLightbox(this)">
-     </div>
-          <div class="img-box">
-   <img src="img/roofs/roofs3.jpg" onclick="openLightbox(this)">
-     </div>
-          <div class="img-box">
-    <img src="img/roofs/roofs4.jpg" onclick="openLightbox(this)">
-     </div>
-          <div class="img-box">
-    <img src="img/roofs/roofs5.jpg" onclick="openLightbox(this)">
-     </div>
-          <div class="img-box">
-    <img src="img/roofs/roofs6.jpg" onclick="openLightbox(this)">
-     </div>
-          <div class="img-box">
-    <img src="img/roofs/roofs7.jpg" onclick="openLightbox(this)">
-     </div>
-          <div class="img-box">
-    <img src="img/roofs/roofs8.jpg" onclick="openLightbox(this)">
-     </div>
-          <div class="img-box">
-   <img src="img/roofs/roofs9.jpg" onclick="openLightbox(this)">
-     </div>
-          <div class="img-box">
-   <img src="img/roofs/roofs10.jpg" onclick="openLightbox(this)">
-     </div>
+      <div class="img-box"><img src="img/roofs/roofs1.jpg" onclick="openLightbox(this)"></div>
+      <div class="img-box"><img src="img/roofs/roofs2.jpg" onclick="openLightbox(this)"></div>
+      <div class="img-box"><img src="img/roofs/roofs3.jpg" onclick="openLightbox(this)"></div>
+      <div class="img-box"><img src="img/roofs/roofs4.jpg" onclick="openLightbox(this)"></div>
+      <div class="img-box"><img src="img/roofs/roofs5.jpg" onclick="openLightbox(this)"></div>
+      <div class="img-box"><img src="img/roofs/roofs6.jpg" onclick="openLightbox(this)"></div>
+      <div class="img-box"><img src="img/roofs/roofs7.jpg" onclick="openLightbox(this)"></div>
+      <div class="img-box"><img src="img/roofs/roofs8.jpg" onclick="openLightbox(this)"></div>
+      <div class="img-box"><img src="img/roofs/roofs9.jpg" onclick="openLightbox(this)"></div>
+      <div class="img-box"><img src="img/roofs/roofs10.jpg" onclick="openLightbox(this)"></div>
     </div>
   </section>
 
+  <!-- سندويش بنل -->
   <section id="sandwich" class="work-section">
-    <h2>سندويشبنل</h2>
-    <div class="gallery">          <div class="img-box">
-    <img src="img/sandwich/sandwich1  .jpg" onclick="openLightbox(this)">
-      </div>
-      <div class="img-box">
-    <img src="img/sandwich/sandwich2  .jpg" onclick="openLightbox(this)">
-      </div>
-      <div class="img-box">
-  <img src="img/sandwich/sandwich3  .jpg" onclick="openLightbox(this)">
-</div>
-<div class="img-box">
-  <img src="img/sandwich/sandwich4  .jpg" onclick="openLightbox(this)">
-</div>
-<div class="img-box">
-  <img src="img/sandwich/sandwich5  .jpg" onclick="openLightbox(this)">
-</div>
-<div class="img-box">
-  <img src="img/sandwich/sandwich6  .jpg" onclick="openLightbox(this)">
-</div>
-<div class="img-box">
-  <img src="img/sandwich/sandwich7  .jpg" onclick="openLightbox(this)">
-</div>
-<div class="img-box">
-  <img src="img/sandwich/sandwich8  .jpg" onclick="openLightbox(this)">
-</div>
-<div class="img-box">
-  <img src="img/sandwich/sandwich9  .jpg" onclick="openLightbox(this)">
-</div>
-<div class="img-box">
-  <img src="img/sandwich/sandwich10  .jpg" onclick="openLightbox(this)">
-</div>
+    <h2 data-ar="سندويش بنل" data-en="Sandwich Panel">سندويش بنل</h2>
+    <div class="gallery">
+      <div class="img-box"><img src="img/sandwich/sandwich1.jpg" onclick="openLightbox(this)"></div>
+      <div class="img-box"><img src="img/sandwich/sandwich2.jpg" onclick="openLightbox(this)"></div>
+      <div class="img-box"><img src="img/sandwich/sandwich3.jpg" onclick="openLightbox(this)"></div>
+      <div class="img-box"><img src="img/sandwich/sandwich4.jpg" onclick="openLightbox(this)"></div>
+      <div class="img-box"><img src="img/sandwich/sandwich5.jpg" onclick="openLightbox(this)"></div>
+      <div class="img-box"><img src="img/sandwich/sandwich6.jpg" onclick="openLightbox(this)"></div>
+      <div class="img-box"><img src="img/sandwich/sandwich7.jpg" onclick="openLightbox(this)"></div>
+      <div class="img-box"><img src="img/sandwich/sandwich8.jpg" onclick="openLightbox(this)"></div>
+      <div class="img-box"><img src="img/sandwich/sandwich9.jpg" onclick="openLightbox(this)"></div>
+      <div class="img-box"><img src="img/sandwich/sandwich10.jpg" onclick="openLightbox(this)"></div>
     </div>
   </section>
 
 </main>
 
-<!-- Lightbox -->
 <div id="lightbox" onclick="closeLightbox()">
   <img id="lightbox-img">
 </div>
 
 <script src="script.js"></script>
-<script>
-  // تثبيت صفحة الأعمال في سجل المتصفح
-  if (location.hash === "") {
-    history.replaceState(null, "", "works.html");
-  }
-
-  // عند الضغط على زر الرجوع
-  window.addEventListener("popstate", function () {
-    window.location.href = "works.html";
-  });
-</script>
 </body>
 </html>
